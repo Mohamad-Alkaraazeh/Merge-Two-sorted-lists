@@ -1,67 +1,27 @@
-package com.company;
-
 /*
-class ListNode {
-    int val;
-    ListNode next;
+You are given the heads of two sorted linked lists list1 and list2.
 
-    ListNode(int val) {
-        this.val = val;
-        this.next = null;
-    }
-}
+Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
 
-public class Main {
+Return the head of the merged linked list.
 
-    public static void main(String[] args) {
-        // Initialisierung der ersten Liste: [1, 2, 4]
-        ListNode list1 = new ListNode(1);
-        list1.next = new ListNode(2);
-        list1.next.next = new ListNode(3);
-        list1.next.next = new ListNode(4);
+Example1: 
+Input: list1 = [1,2,4], list2 = [1,3,4]
+Output: [1,1,2,3,4,4]
 
-        // Initialisierung der zweiten Liste: [1, 3, 4]
-        ListNode list2 = new ListNode(1);
-        list2.next = new ListNode(3);
-        list2.next.next = new ListNode(4);
 
-        // Aufruf der mergeTwoLists Methode und Ausgabe der gemischten Liste
-        ListNode mergedList = mergeTwoLists(list1, list2);
+Example 2:
+Input: list1 = [], list2 = []
+Output: []
 
-        // Ausgabe der gemischten Liste
-        while (mergedList != null) {
-            System.out.print(mergedList.val + " ");
-            mergedList = mergedList.next;
-        }
-    }
+Example 3:
+Input: list1 = [], list2 = [0]
+Output: [0]
+    */
 
-    public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        // Dummy-Knoten zur Erleichterung der Listenverkettung
-        ListNode dummy = new ListNode(0);
-        ListNode current = dummy;
 
-        while (list1 != null && list2 != null) {
-            if (list1.val <= list2.val) {
-                current.next = list1;
-                list1 = list1.next;
-            } else {
-                current.next = list2;
-                list2 = list2.next;
-            }
-            current = current.next;
-        }
 
-        // Anhängen der verbleibenden Knoten der nicht leeren Liste
-        if (list1 != null) {
-            current.next = list1;
-        } else {
-            current.next = list2;
-        }
-
-        return dummy.next; // Der erste Knoten ist der Dummy, daher geben wir dummy.next zurück
-    }
-}*/
-
+package com.company;
 
 class ListNode {
     int val;
